@@ -1,0 +1,30 @@
+<div class="container mt-5 mb-5">
+    <table  class="table">
+        <thead>
+            <tr>
+                <th>Product Id</th>
+                <th>sku</th>
+                <th>Product Name</th>
+                <th>description</th>
+                <th>unit price</th>
+                <th>image url</th>
+                <th>datecreated</th>
+                <th>dateupdated</th>
+                <th>category id</th>
+            </tr>
+        </thead>
+        <tbody>      
+            <tr *ngFor="let product of productList">
+                <td>{{product.productId}}</td>
+                <td>{{product.sku}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.unitprice}}</td>
+                <td>{{product.imageurl}}</td>
+                <td>{{product.datecreated}}</td>
+                <td>{{product.lastupdated}}</td>
+                <td>{{product.categoryid}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>

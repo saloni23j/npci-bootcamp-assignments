@@ -1,0 +1,16 @@
+
+<div class="container mt-5 mb-5">
+    <form #SPForm="ngForm" (ngSubmit)="onSubmit(categoryModel)">
+        <div class="form-group row"> <label class="col-sm-2 col-form-label">Category id</label>
+            <div class="col-sm-10"> <input type="text" name="categoryid" [(ngModel)]="categoryModel.categoryid"> </div>
+        </div>
+    
+        <div class="form-group row"> <label class="col-sm-2 col-form-label">Category Name</label>
+            <div class="col-sm-10"> <input type="text" name="categoryname" [(ngModel)]="categoryModel.categoryname"> </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <div class="col-lm-4"><button class="btn btn-primary" type="submit">Submit</button></div>
+        </div>
+        </form>
+    </div>
