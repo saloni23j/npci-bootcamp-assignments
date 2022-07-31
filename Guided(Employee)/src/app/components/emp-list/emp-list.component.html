@@ -1,0 +1,29 @@
+<div class="container mt-5 mb-5">
+    <table  class="table">
+        <thead>
+            <tr>
+                <th>Employee number</th>
+                <th>Employee Name</th>
+                <th>Job</th>
+                <th>hiredate</th>
+                <th>manager id</th>
+                <th>salary</th>
+                <th>commission</th>
+                <th>deptno</th>
+            </tr>
+        </thead>
+        <tbody>      
+            <tr *ngFor="let employee of employeeList">
+                <td>{{employee.empno}}</td>
+                <td>{{employee.ename}}</td>
+                <td>{{employee.job}}</td>
+                <td>{{employee.hiredate}}</td>
+                <td>{{employee.managerId}}</td>
+                <td>{{employee.salary}}</td>
+                <td>{{employee.commission}}</td>
+                <td>{{employee.deptNo}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+    </div>
