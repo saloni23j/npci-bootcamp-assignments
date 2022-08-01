@@ -1,0 +1,48 @@
+<div class="container mt-5 mb-5">
+    <h4>Add Product</h4><br>
+    <form #SPForm="ngForm" (ngSubmit)="onSubmit(productModel)">
+        <div class="form-group row"> <label class="col-sm-2 col-form-label">Product id</label>
+            <div class="col-sm-10"> <input type="number" name="id" [(ngModel)]="productModel.productId"> </div>
+        </div>
+    
+        <div class="form-group row"> <label class="col-sm-2 col-form-label">SKU</label>
+            <div class="col-sm-10"> <input type="text" name="sku" [(ngModel)]="productModel.sku"> </div>
+        </div>
+
+        <div class="form-group row"> <label class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10"> <input type="text" name="name" [(ngModel)]="productModel.name"> </div>
+        </div>
+    
+        <div class="form-group row"> <label class="col-sm-2 col-form-label">description</label>
+            <div class="col-sm-10"> <input type="text" name="description" [(ngModel)]="productModel.description"> </div>
+        </div>
+        <div class="form-group row"> <label class="col-sm-2 col-form-label">unitprice </label>
+            <div class="col-sm-10"> <input type="number" name="unitprice" [(ngModel)]="productModel.unitprice">
+            </div>
+        </div>
+        <div class="form-group row"> <label class="col-sm-2 col-form-label">imageurl</label>
+            <div class="col-sm-10"> <input type="text" name="imageurl" [(ngModel)]="productModel.imageurl">
+            </div>
+        </div>
+        <div class="form-group row"> <label class="col-sm-2 col-form-label">datecreated</label>
+            <div class="col-sm-10"> <input type="date" name="datecreated" [(ngModel)]="productModel.datecreated">
+            </div>
+        </div>
+        <div class="form-group row"> <label class="col-sm-2 col-form-label">lastupdated</label>
+            <div class="col-sm-10"> <input type="date" name="lastupdated" [(ngModel)]="productModel.lastupdated">
+            </div>
+        </div>
+        <div class="form-group row"> <label class="col-sm-2 col-form-label">category Id</label>
+            <div class="col-sm-10">
+                 <!-- <input type="number" name="categoryid" [(ngModel)]="productModel.categoryid"> -->
+                 <select name="category" [(ngModel)]="productModel.categoryid">
+                    <option *ngFor="let category of categories" value="{{category.categoryid}}">{{category.categoryname}}</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <div class="col-lm-4"><button class="btn btn-primary" type="submit">Submit</button></div>
+        </div>
+        </form>
+    </div>
