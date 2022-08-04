@@ -1,0 +1,29 @@
+SQL for Product assignments:
+
+create database ecommerce;
+use ecommerce;
+create table Productcategory(
+categoryid BIGINT primary key auto_increment,
+categoryname VARCHAR(255)
+);
+create table Product(
+id BIGINT primary key auto_increment,
+sku VARCHAR(255),
+name VARCHAR(255),
+description VARCHAR(255),
+unitprice DECIMAL(13,2),
+imageurl VARCHAR(255),
+unitsinstock INT,
+datecreated DATETIME(6),
+lastupdated DATETIME(6),
+categoryid BIGINT,
+foreign key(categoryid) references Productcategory(categoryid));
+
+insert into Productcategory values(1,"clothing");
+insert into Productcategory values(2,"grocery");
+insert into Productcategory values(3,"General well-being");
+
+insert into Product values(100,"Clothes", "Blue Top", "Blue Cotton Top", 1400,"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.designerdesirables.com%2Fimages%2Fgolden-days-blue-cotton-mini-tassel-bardot-top-p36456-307372_zoom.jpg&f=1&nofb=1",10,CURDATE(),curdate(),1);
+insert into Product values(101,"Oils", "Olive Oil", "Olive oil for cooking", 345,"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbreastcancerconqueror.com%2Fwp-content%2Fuploads%2F2015%2F08%2Folive.jpg&f=1&nofb=1",100,CURDATE(),curdate(),2);
+insert into Product values(102,"Tees", "Slim fit tshirt", "Tshirts", 1800,"https://i5.walmartimages.com/asr/d7598e98-6fc3-4927-a2f5-6af52888ee74_1.2743ad929d22874d24145c9f01a2f30d.jpeg",50,CURDATE(),curdate(),1);
+insert into Product values(103,"wellness", "septilin", "used to increase immunity", 140,"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0263%2F9511%2F5591%2Fproducts%2FSeptilin_2000px-KI_2048x2048.jpg%3Fv%3D1611118249&f=1&nofb=1",30,CURDATE(),curdate(),3);
